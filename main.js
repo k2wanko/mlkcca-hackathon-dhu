@@ -110,6 +110,7 @@
     var val = data.value;
     if (!val) return;
     if (val.uid == uid) return;
+    createMarker(val.uid, val.pos);
     console.log('on send', data);
   });
   

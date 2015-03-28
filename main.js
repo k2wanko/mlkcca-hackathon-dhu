@@ -1,9 +1,10 @@
 (function(){
-  var milkcocoa = new MilkCocoa("https://io-ui7rsabaf.mlkcca.com");
-  var duration = 1000;
+  var milkcocoa = new MilkCocoa("https://io-ui7rsabaf.mlkcca.com:443");
+  var duration = 10 * 1000;
   //var message = milkcocoa.dataStore("message");
   
   var onPosition = function(pos) {
+    console.log('pos', pos);
   };
 
   var onError = function(err) {
@@ -24,12 +25,12 @@
 
     geolocation();
     
-    setTimeout(LocationLooper, duration);
+    setTimeout(locationLooper, duration);
   };
-  locationLooper.isCancel = false
+  locationLooper.isCancel = false;
   locationLooper.cancel = function() {
     locationLooper.isCancel = true;
-  }
-  setTimeout(LocationLooper, duration)
+  };
+  setTimeout(locationLooper, duration);
   
 })();

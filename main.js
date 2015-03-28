@@ -33,10 +33,12 @@
     var latlng = new google.maps.LatLng(coords.latitude, coords.longitude);
     var marker = markers[uid];
     if (!marker){
+      var color = uid.slice(0, 3);
       marker = markers[uid] = new google.maps.Marker({
         position: latlng,
         map: map,
-        title: uid
+        title: uid,
+        icon: "http://placehold.it/50/"+ color+"/ffffff&text=" + color
       });
     } else {
       marker.setPosition(latlng);

@@ -2,11 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>Milkcocoa Hackathon</title>    
+    <title>Milkcocoa Hackathon</title>
+    <style>
+      html, body, #map_canvas {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Milkcocoa Hackathon</h1>
+    <div id="map_canvas" style="width:100%; height:100%"></div>
   </body>
   <script src="http://cdn.mlkcca.com/v0.2.8/milkcocoa.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCbTmBoBiyCxTKGqdKqEk8U77EB4CqGcAE&sensor=false"></script>
+
   <script src="main.js"></script>
 </html>
